@@ -36,4 +36,3 @@ return apelidos2
 {...}
 console.log(novosApelidos(pessoa))
 
-
