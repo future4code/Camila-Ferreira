@@ -12,9 +12,9 @@ soma(1,2)
 
 function imprimeMensagem() {
 const mensagem = prompt("Digite uma mensagem!")
-return mensagem
+return console.log(mensagem)
 }
-console.log(imprimeMensagem())
+imprimeMensagem()
 
 
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
@@ -24,9 +24,9 @@ function calculaAreaRetangulo() {
 const altura = prompt("Insira uma altura")
 const largura = prompt("Insira uma largura")
 const operacao = altura * largura
-return operacao
+return console.log(operacao)
 }
-console.log(calculaAreaRetangulo())
+calculaAreaRetangulo()
 
 
 // EXERCÍCIO 02
@@ -34,9 +34,9 @@ function imprimeIdade() {
 const anoAtual = prompt("Qual o ano atual?")
 const anoNascimento = prompt("Em que ano você nasceu?")
 const idade = anoAtual - anoNascimento
-return idade
+return console.log(idade)
 }
-console.log(imprimeIdade())
+imprimeIdade()
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
@@ -69,9 +69,10 @@ imprimeTresCoresFavoritas()
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
-  const stringMaiusc = "o"
-    return stringMaiusc.toUpperCase()
+  const stringMaiusc = string.toUpperCase()
+    return stringMaiusc
 }
+
 retornaStringEmMaiuscula("oi")
 
 // EXERCÍCIO 07
@@ -83,49 +84,62 @@ calculaIngressosEspetaculo(3000,100)
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
-  // implemente sua lógica aqui
-
+const mesmoTamanho = string1.length === string2.length
+return mesmoTamanho
 }
-checaStringsMesmoTamanho(string1,string2)
+checaStringsMesmoTamanho("ola", "abcd")
 
 // EXERCÍCIO 09
-function retornaPrimeiroElemento(array) {
-  // implemente sua lógica aqui
-
+function retornaPrimeiroElemento(array)
+{
+const primeiroElemento = array[0]
+return primeiroElemento
 }
+retornaPrimeiroElemento(["Maca", "Banana", "Laranja"])
+
 
 // EXERCÍCIO 10
-function retornaUltimoElemento(array) {
-  // implemente sua lógica aqui
-
+function retornaUltimoElemento(array) 
+{
+const ultimoElemento = array[array.length-1]
+return ultimoElemento
 }
+retornaUltimoElemento(["Maca", "Banana", "Laranja"])
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  // implemente sua lógica aqui
-
+const primeiro = array[0]
+const segundo = array[array.length-1]
+array[0] = segundo
+array[array.length-1] = primeiro
+return array
 }
+trocaPrimeiroEUltimo(["Maca", "Banana", "Laranja"])
+
 
 // EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  // implemente sua lógica aqui
-
+function checaIgualdadeDesconsiderandoCase(string1, string2) 
+{
+const igualdade = string1.toLowerCase() === string2.toLowerCase()
+return console.log(igualdade)
 }
+checaIgualdadeDesconsiderandoCase("banana", "banANA")
 
-// EXERCÍCIO 13
-function checaRenovacaoRG() {
-  // implemente sua lógica aqui
 
-}
+// // EXERCÍCIO 13
+// function checaRenovacaoRG() {
+//   // implemente sua lógica aqui
 
-// EXERCÍCIO 14
-function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
+// }
 
-}
+// // EXERCÍCIO 14
+// function checaAnoBissexto(ano) {
+//   // implemente sua lógica aqui
 
-// EXERCÍCIO 15
-function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
+// }
 
-}
+// // EXERCÍCIO 15
+// function checaValidadeInscricaoLabenu() {
+//   // implemente sua lógica aqui
+
+// }
