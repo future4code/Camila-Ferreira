@@ -15,10 +15,14 @@ retornaTamanhoArray(exercicio1Array)
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
- 
+    const arrayInvertida = array.reverse()
+    return arrayInvertida
 }
+  const exercicio2Array = [1, 2, 3]
+  retornaArrayInvertido()
 
-// EXERCÍCIO 03
+
+  // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
 
 }
