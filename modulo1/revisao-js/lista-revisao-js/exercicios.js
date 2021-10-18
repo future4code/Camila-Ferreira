@@ -24,8 +24,12 @@ function retornaArrayInvertido(array) {
 
   // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-
+    const arrayOrdenado = array.sort((a, b) => a - b)
+    return arrayOrdenado
 }
+  const exercicio3Array = [1, 2, 3, 4]
+  retornaArrayOrdenado()
+
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
