@@ -1,0 +1,36 @@
+*{ margin: 0px;
+}
+
+html, body{
+    height: 100%;
+}
+
+header{
+    text-align: center;
+    color:rgb(155, 189, 110)
+
+}
+
+.subheader{
+    display: block;
+    text-align: center;
+
+
+}
+
+body{
+    background-color: rgb(250, 229, 233);
+}
+
+.sementinha{ 
+    text-align: center;
+    color:rgb(155, 189, 110)
+}
+
+footer{
+    align-content: center;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+
