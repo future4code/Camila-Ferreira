@@ -77,7 +77,8 @@ div img {
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 20px 20px 20px 430px;
+    text-align: justify;   
 }
 
 #container-para-comprar {
@@ -100,9 +101,10 @@ div img {
 div:nth-child(2),
 div:last-child {
     text-align: center;
-}
+  }
 
 table {
+    margin: auto;
     width: 60%;
     text-align: center;
     
@@ -138,7 +140,9 @@ td button:active{
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    
 }
+
 
 #back-button:hover {
     background-color: #635a3d
