@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
-import camila from './imgs/camila.jpg' 
+import CardPequeno from './components/CardPequeno/CardPequeno'
+import camila from './imgs/camila.jpg'
+import labenu from './imgs/labenu.jpg'
+import seccultura from './imgs/seccultura.png'
+import email from './imgs/email.jpg'
+import endereco from './imgs/endereco.png'
 
 function App() {
   return (
@@ -10,9 +16,10 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="camila" 
+          imagem={camila}
           nome="Camila Santos Ferreira" 
-          descricao="Oi, eu sou a Camila Santos Ferreira. Sou aluna do curso Dev Full Stack na Labenu. Amo aprender coisas novas :)"
+          descricao="Oi, eu sou a Camila Santos Ferreira.
+          Sou aluna do curso Dev Full Stack na Labenu. Amo aprender coisas novas :)"
         />
         
         <ImagemButton 
@@ -21,18 +28,32 @@ function App() {
         />
       </div>
 
+
+     <div className="page-section-container">
+       <CardPequeno
+       imagem={email} nome="Email" descricao="Email: caliopeferrer@gmail.com"
+       />
+       </div> 
+
+       <div className="page-section-container">
+       <CardPequeno
+       imagem={endereco}
+       descricao="Avenida Senador Ricardo Batista"
+       />
+       </div> 
+
       <div className="page-section-container">
-        <h2>Experiências profissionais</h2>
+        <h2>Experiências</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
+          imagem={labenu} 
           nome="Labenu" 
           descricao="Aluna Dev Full Stack" 
         />
         
         <CardGrande 
-          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg" 
+          imagem={seccultura} 
           nome="Secretaria de Cultura e Economia Criativa" 
-          descricao="Estágiaria Admnistrativa na Unidade de Monitoramento" 
+          descricao="Estágiaria Administrativa na Unidade de Monitoramento" 
         />
       </div>
 
