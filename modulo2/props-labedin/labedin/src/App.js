@@ -9,12 +9,20 @@ import labenu from './imgs/labenu.jpg'
 import seccultura from './imgs/seccultura.png'
 import email from './imgs/email.jpg'
 import endereco from './imgs/endereco.png'
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #FFB6C1;
+  }
+  `
 
 function App() {
-  return (
+  return ( 
     <div className="App">
+       <GlobalStyle/>
       <div className="page-section-container">
-        <h2>Dados pessoais</h2>
+        <h2>Dados Pessoais</h2>
         <CardGrande 
           imagem={camila}
           nome="Camila Santos Ferreira" 
