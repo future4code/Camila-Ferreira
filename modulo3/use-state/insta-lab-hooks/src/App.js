@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Post from './components/Post/Post';
 import styled from "styled-components"
+
 
 const AppContainer = styled.div `
   display: flex;
