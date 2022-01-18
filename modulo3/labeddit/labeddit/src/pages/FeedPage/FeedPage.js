@@ -1,10 +1,12 @@
 import React from "react"
+import styled from "styled-components"
+import FeedPageStyled from "./styled"
 
 const FeedPage = () => {
     return (
-        <div>
+        <FeedPageStyled>
             <h1>FeedPage</h1>
-        </div>
+        </FeedPageStyled>
     )
 }
 
