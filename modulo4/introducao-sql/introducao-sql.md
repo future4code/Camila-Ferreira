@@ -105,4 +105,168 @@ VALUES(
 );
 ~~~
 
+### EXERCICIO 3
 
+### a)
+
+~~~sql
+SELECT id, name from Actor WHERE gender = "female";
+~~~
+
+### b)
+
+~~~sql 
+SELECT salary from Actor WHERE name = "Tony Ramos";
+~~~
+
+### c)
+
+### Retorna "0 row(s) returned" pois não há nenhuma linha de gender com esse valor
+
+### d)
+
+~~~sql
+SELECT id, name, salary from Actor WHERE salary < 500000;
+~~~
+
+### e) Retorna o erro "Error Code: 1054. Unknown column 'nome' in 'field list'" 
+### O erro diz que a coluna "nome" é desconhecida, pois aqui utilizamos "name". Corrigida:
+
+~~~sql
+SELECT id, name from Actor WHERE id = "002"
+~~~
+
+### EXERCICIO 4
+
+### a) A query SELECT * FROM Actor WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000
+### Seleciona da tabela Actor os atores em que o começo de strings quaisquer, no caso as da coluna nome, sejam igual a "A" ou "J" E que o salario seja acima de 300000
+
+### b)
+
+~~~sql
+SELECT * from Actor WHERE (name NOT LIKE "A%") AND salary > 350000;
+~~~
+
+### c) 
+
+~~~sql
+SELECT * from Actor WHERE name LIKE "%g%" OR "%G%";
+~~~
+
+### d) 
+
+~~~sql
+SELECT * from Actor WHERE (name LIKE "%a%" OR "%A%" OR "%g%" OR "%G%") AND SALARY BETWEEN 350000 AND 900000;
+~~~
+
+### EXERCICIO 5 
+
+~~~sql
+CREATE TABLE Films (
+id VARCHAR(255) PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+synopsis TEXT NOT NULL,
+release_date DATE NOT NULL,
+rating INT NOT NULL
+); 
+~~~
+
+### a) A query cria uma tabela com id, sendo ela a PRIMARY KEY, o name, uma sinopse com tipo text (que permite limite maior de tamanho), uma data de lançamento tipo date e avaliação que é um numero inteiro de 1 - 10, todos eles não permitem valor nulo.
+
+### b) 
+
+~~~sql
+INSERT INTO Films (id, name, synopsis, release_date, rating)
+VALUES(
+"001",
+"Se Eu Fosse Você",
+"Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+"2006-01-06",
+7
+);
+~~~
+
+### c)
+
+~~~sql
+INSERT INTO Films (id, name, synopsis, release_date, rating)
+VALUES(
+"002",
+"Doce de mãe",
+"Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela",
+"2012-12-27",
+10
+);
+~~~
+
+### d)
+
+~~~sql
+INSERT INTO Films (id, name, synopsis, release_date, rating)
+VALUES(
+"003",
+"Dona Flor e Seus Dois Maridos",
+"Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+"2017-11-02",
+8
+);
+~~~
+
+### e)
+
+~~~sql
+INSERT INTO Films (id, name, synopsis, release_date, rating)
+VALUES(
+"004",
+"O Auto da Compadecida",
+"As aventuras de João Grilo e Chicó, dois nordestinos pobres que vivem de golpes para sobreviver. Eles estão sempre enganando o povo de um pequeno vilarejo, inclusive o temido cangaceiro Severino de Aracaju, que os persegue pela região.",
+"2000-09-10",
+9
+);
+~~~
+
+### EXERCICIO 6
+
+### a)
+
+~~~sql
+SELECT id, name, rating FROM Films  WHERE id = "002";
+~~~
+
+### b) 
+
+~~~sql
+SELECT id, name, rating FROM Films  WHERE id = "002";
+~~~
+
+### c)
+
+~~~sql 
+SELECT id, name, synopsis FROM Films WHERE rating > 7;
+~~~
+
+### EXERCICIO 7
+
+### a)
+
+~~~sql
+SELECT * FROM Films WHERE name LIKE "%vida%";
+~~~
+
+### b)
+
+~~~sql
+SELECT * FROM Films WHERE name LIKE "%cangaceiro%" OR synopsis LIKE "%cangaceiro%";
+~~~
+
+### c)
+
+~~~sql
+SELECT * FROM Films WHERE release_date < "2022-01-30";
+~~~
+
+### d)
+
+~~~sql
+SELECT * FROM Films WHERE release_date < "2022-01-30" AND (name LIKE "%cangaceiro%" OR synopsis LIKE "%cangaceiro%") AND rating > 7;
+~~~ 
